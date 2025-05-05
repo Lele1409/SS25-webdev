@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Übung 3: Bootstrap</title>
-    <link rel="stylesheet" href="/W3/include/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="W3/include/css/bootstrap.min.css" media="screen">
 </head>
 <!-- DOCUMENTATION TO THE BOOTSTRAP EXAMPLES: https://getbootstrap.com/docs/5.3/examples -->
 <body>
@@ -26,41 +26,31 @@
 			</div>
         </div>
     </nav>
-    
-    <!-- 'container' centers and constrains main content; 'my-4' adds vertical margin -->
+
     <main class="container my-4">
-        <!-- 'row' defines a horizontal group of columns in the grid system -->
         <div class="row">
-            <!-- 'col-md-3' sets the column width to 3/12 on medium screens and larger -->
             <section class="col-md-3">
                 <h2>Navigation</h2>
-                <!-- 'list-group' styles the list as a bordered group -->
                 <ul class="list-group">
-                    <!-- 'list-group-item' styles each item within the list group -->
                     <li class="list-group-item"><a href="#">Link 1</a></li>
                     <li class="list-group-item"><a href="#">Link 2</a></li>
                     <li class="list-group-item"><a href="#">Link 3</a></li>
                 </ul>
             </section>
-            <!-- 'col-md-9' sets the column width to 9/12 on medium screens and larger -->
             <section class="col-md-9">
                 <h2>Willkommen!</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
                 <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.</p>
                 <!-- Carousel with Cards as slides -->
                 <div id="cardCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-theme="light">
-                    <!-- Indicators for card carousel -->
                     <div class="carousel-indicators" data-bs-theme="light">
                         <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Card Slide 1"></button>
                         <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Card Slide 2"></button>
                     </div>
                     <div class="carousel-inner pb-3">
-                        <!-- First slide with a card -->
                         <div class="carousel-item active" style="height: 25rem;">
                             <div class="card mx-auto">
-                                <!-- Card image -->
                                 <img src="https://placehold.co/800x200" class="card-img-top" alt="Bildbeschreibung" style="height: 200px; object-fit: cover;">
-                                <!-- Card body -->
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae id cum suscipit quam, aperiam rerum omnis doloremque voluptates in iusto.</p>
@@ -68,12 +58,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Second slide with a card -->
                         <div class="carousel-item" style="height: 25rem;">
                             <div class="card mx-auto">
-                                <!-- Card image -->
                                 <img src="https://placehold.co/600x400" class="card-img-top" alt="Bildbeschreibung" style="height: 200px; object-fit: cover;">
-                                <!-- Card body -->
                                 <div class="card-body">
                                     <h5 class="card-title">Title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae id cum suscipit quam, aperiam rerum omnis doloremque voluptates in iusto.</p>
@@ -87,7 +74,6 @@
         </div>
     </main>
     
-    <!-- 'bg-light' gives the footer a light background color; 'py-3' adds vertical padding -->
     <footer class="py-3">
         <div class="container">
             <address>
