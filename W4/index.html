@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Woche 4</title>
+</head>
+<body>
+    <h1>Inhalt der Woche 4</h1>
+    <h2>Farben</h2>
+    <button id="btn-rot" onclick="changeColor('red')">Rot</button>
+    <button id="btn-gruen" onclick="changeColor('green')">Grün</button>
+    <button id="btn-blau" onclick="changeColor('blue')">Blau</button>
+    <button id="btn-gelb" onclick="changeColor('yellow')">Gelb</button>
+    <button id="btn-schwarz" onclick="changeColor('black')">Schwarz</button>
+    <button id="btn-weiss" onclick="changeColor('white')">Weiß</button>
+    <h2>Weiteres</h2>
+    <button id="btn-reset">Zurücksetzen</button>
+    <button id="btn-undo">Letzte Farbe entfernen</button>
+    <h2>Ausgewählte Farbe</h2>
+    <div id="preview" style="border: black 1px solid; width: 200px; height: 50px;"></div>
+    <h2>Farbverlauf</h2>
+    <ol id="history"></ol>
+    <button id="btn-printHistory" onclick="printHistory()">Print current hisstory to console</button>
+    <script src="script.js"></script>
+    <script>
+        // undo and reset button
+        document.querySelector("#btn-undo").addEventListener("click", undo);
+        document.querySelector("#btn-reset").addEventListener("click", reset);
+
+        // initial reset
+        reset();
+    </script>
+</body>
+</html>
