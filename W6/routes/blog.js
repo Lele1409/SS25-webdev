@@ -10,13 +10,16 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     const body = req.body;
+    // Add a UUID to identify the blog entry
+    body.id = Math.random().toString(36).substring(2, 15);
+    body.date = new Date().toISOString();
     blogData.push(body);
-    console.log(body);
-    res.send('Post-Request empfangen');
+    res.send(body);
 });
 
-router.get('/1', function(req, res, next) {
-    res.send(blogData[0]);
+router.get('/:postid', function(req, res, next) {
+    const post = blogData.find(p => p.id === req.params.postid);
+    res.send(post);
 });
 
 module.exports = router;

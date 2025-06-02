@@ -18,7 +18,7 @@ router.get('/names', function(req, res, next) {
 
 router.get('/:yyyy/:mm/:dd', function(req, res, next) {
   const { yyyy, mm, dd } = req.params;
-  const { name } = req.query;
+  const { name } = req.query.names;
   res.render('index', { title: 'Datum', name: `${yyyy}-${mm}-${dd}`, name: name });
 });
 
