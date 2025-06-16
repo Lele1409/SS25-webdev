@@ -24,8 +24,6 @@ router.get('/:yyyy/:mm/:dd', function(req, res, next) {
 
 router.post('/post', function(req, res, next) {
   const { name } = req.body;
-  console.log(req.body);
-  console.log(name);
 });
 
 module.exports = router;
